@@ -36,7 +36,8 @@ bot.on('message', async message => {
      };
     
 // Break
-
+if (message.channel.id === '746951883574476902')
+    await message.delete();
 if (message.content.toLowerCase() === '?music commands' && message.channel.id === '746951883574476902'){
   message.delete()
   if(message.member.hasPermission('ADMINISTRATOR')) {
