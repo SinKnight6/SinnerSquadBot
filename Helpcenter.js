@@ -20,7 +20,7 @@ bot.on('message', async message => {
 
 // Break
 
-    if (message.content.toLowerCase() === 'help message' && message.channel.id === '745849795868098622'){
+    if (message.content.toLowerCase() === '?help message' && message.channel.id === '745849795868098622'){
       message.delete()
       if(message.member.hasPermission('ADMINISTRATOR')) {
       let embed = new Discord.MessageEmbed()
@@ -35,6 +35,52 @@ bot.on('message', async message => {
      };
      };
     
+// Break
+
+if (message.content.toLowerCase() === '?music commands' && message.channel.id === '745849795868098622'){
+  message.delete()
+  if(message.member.hasPermission('ADMINISTRATOR')) {
+  let embed = new Discord.MessageEmbed()
+  .setColor(000000)
+  .setDescription(`
+-play[link or search query]
+Loads your input and adds it to the queue. If there is no playing track, then it will start playing.
+
+-join
+Makes the bot join your voice channel.
+
+-queue
+Displays the queue.
+
+-next
+Skips to the next song.
+
+-back
+Skips to the previous song.
+
+-clear
+Removes all tracks from the queue.
+
+-lyrics
+Displays lyrics for the playing track.
+
+-pause
+Pauses playback.
+
+-resume
+Resumes playback.
+
+-disconnect
+Disconnects the bot from your voice channel and clears the queue.
+  
+  
+  `)
+  message.channel.send({embed: embed});
+ } else {
+   message.reply("You don't have permission to use this command lol.").then(sentMessage => sentMessage.delete({ timeout: 6000
+   }))
+ };
+ };
 
 // Brealk 
     if (message.channel.id === '745849795868098622')
