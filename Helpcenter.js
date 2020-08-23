@@ -37,7 +37,7 @@ bot.on('message', async message => {
     
 // Break
 
-if (message.content.toLowerCase() === '?music commands' && message.channel.id === '745849795868098622'){
+if (message.content.toLowerCase() === '?music commands' && message.channel.id === '746951883574476902'){
   message.delete()
   if(message.member.hasPermission('ADMINISTRATOR')) {
   let embed = new Discord.MessageEmbed()

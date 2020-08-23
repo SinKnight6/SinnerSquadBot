@@ -10,20 +10,21 @@ var testChannel = bot.channels.cache.find( channel => channel.id === '7459105758
 console.log(`Roless on!`);
 
 setInterval(() => {
-    const embed = new Discord.MessageEmbed();
-        embed.setTitle("What games do you play??");
-        embed.setColor(colors.blue);
-        embed.setDescription(
-        "<:cod:746208061550624860> - COD\n" +
-        "<:valoran:746203917272219891> - VALORAN\n" + 
-        "<:apex:746207267728392232> - APEX\n" +
-        "<:overwatch:746205939278938173> - OVERWATCH\n" + 
-        "<:fortnite:746205379511189554> - FORTNITE\n" + 
-        "<:rainbow6:746211445154250846> - RAINBOW SIX\n" + 
-        "<:csgo:746206777007407205> - CS:GO\n" + 
-        "<:pubg:746207022084653167> - PUBG\n" + 
-        "<:gtav:746210858937352263> - GTAV\n" + 
-        "<:warframe:746208599021191190> - WARFRAME\n");
+            const embed = new Discord.MessageEmbed();
+            embed.setAuthor('Select the games that you play (you can choose multiple)')
+            embed.setColor(colors.blue);
+            embed.setDescription(
+            "NOTE: When you select any of these you will have access to the community chat of the game\n"+
+            "<:cod:746208061550624860> - COD\n" +
+            "<:valoran:746203917272219891> - VALORAN\n" + 
+            "<:apex:746207267728392232> - APEX\n" +
+            "<:overwatch:746205939278938173> - OVERWATCH\n" + 
+            "<:fortnite:746205379511189554> - FORTNITE\n" + 
+            "<:rainbow6:746211445154250846> - RAINBOW SIX\n" + 
+            "<:csgo:746206777007407205> - CSGO\n" + 
+            "<:pubg:746207022084653167> - PUBG\n" +
+            "<:gtav:746210858937352263> - GTA V\n" +
+            "<:warframe:746208599021191190> - WARFRAME\n");
         testChannel.send(embed)
         .then(sentMessage => sentMessage.delete({ timeout: 25200000 })
         .catch(error => {
@@ -63,9 +64,9 @@ bot.on('message', message => {
         if(message.member.hasPermission('MANAGE_MESSAGES')) {
         const embed = new Discord.MessageEmbed();
         embed.setAuthor('Select the games that you play (you can choose multiple)')
-        embed.setTitle(`NOTE: When you select any of these you will have access to the community chat of the game`);
         embed.setColor(colors.blue);
         embed.setDescription(
+        "NOTE: When you select any of these you will have access to the community chat of the game\n"+
         "<:cod:746208061550624860> - COD\n" +
         "<:valoran:746203917272219891> - VALORAN\n" + 
         "<:apex:746207267728392232> - APEX\n" +
