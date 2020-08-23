@@ -5,7 +5,7 @@ modarator = require("./Modarator");
 livechat = require("./LiveChat");
 Roless = require("./Roles");
 purgecommand = require("./PurgeCommand")
-const token = 'NzQ1ODEwNjQyNTgxMTkyNzQ5.Xz3MSQ.IUXZLoiAUiYGsDnLcfYibzjFOPo';
+const token = process.env.token;
 const PREFIX = '$';
 const bot = new Discord.Client;
 
