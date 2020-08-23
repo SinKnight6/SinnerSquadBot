@@ -11,7 +11,7 @@ console.log(`Roless on!`);
 
 setInterval(() => {
             const embed = new Discord.MessageEmbed();
-            embed.setAuthor('Select the games that you play (you can choose multiple)')
+            embed.setTitle('Select the games that you play (you can choose multiple)')
             embed.setColor(colors.blue);
             embed.setDescription(
             "NOTE: When you select any of these you will have access to the community chat of the game\n"+
@@ -39,7 +39,7 @@ bot.on('message', message => {
     {
         if(message.embeds)
         {
-            const embedMsg = message.embeds.find(msg => msg.title === 'NOTE: When you select any of these you will have access to the community chat of the game');
+            const embedMsg = message.embeds.find(msg => msg.title === 'Select the games that you play (you can choose multiple');
             if(embedMsg)
             {
                 message.react('746208061550624860')
@@ -63,7 +63,7 @@ bot.on('message', message => {
         message.delete()
         if(message.member.hasPermission('MANAGE_MESSAGES')) {
         const embed = new Discord.MessageEmbed();
-        embed.setAuthor('Select the games that you play (you can choose multiple)')
+        embed.setTitle('Select the games that you play (you can choose multiple)')
         embed.setColor(colors.blue);
         embed.setDescription(
         "NOTE: When you select any of these you will have access to the community chat of the game\n"+
