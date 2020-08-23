@@ -39,7 +39,7 @@ bot.on('message', message => {
     {
         if(message.embeds)
         {
-            const embedMsg = message.embeds.find(msg => msg.title === 'Select the games that you play (you can choose multiple');
+            const embedMsg = message.embeds.find(msg => msg.title === 'Select the games that you play (you can choose multiple)');
             if(embedMsg)
             {
                 message.react('746208061550624860')
