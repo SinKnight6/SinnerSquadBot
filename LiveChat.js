@@ -62,8 +62,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 // Live chat end.
 
 //   Helper Start
-if (message.channel.id === '745849795868098622')
-if (message.content.toLowerCase() === '!help'){
+if (message.content.toLowerCase() === '!help' && message.channel.id === '745811686530744322'){
     message.author.send('Bot is typing .....')
       .then(sentMessage => sentMessage.delete({ timeout: 8000 })
      .catch(error => {
