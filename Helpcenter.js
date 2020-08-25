@@ -108,12 +108,7 @@ Disconnects the bot from your voice channel and clears the queue.
           .setColor(0xFF0000)
           .setTitle(`**${message.author}**, Your help request was cancelled`)
           .addField('**Error**','**You did not say any commands within the time limit!, to summon me again please use,  ``!live chat`` command.**');
-           message.channel.send({embed: uEmbed})
-           .then(sentMessage => sentMessage.delete({ timeout: 6000
-           }))
-           .catch(error => {
-   
-     });
+           message.channel.send({embed: uEmbed});
          });
      });
      
