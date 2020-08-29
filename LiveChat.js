@@ -81,7 +81,7 @@ if (message.content.toLowerCase() === '!help' && message.channel.id === '7458497
     let uEmbed1 = new Discord.MessageEmbed()
     .setColor(colors.blue)
     .setTitle("Hello there Human you have requested for help, how can i help you today?")
-    .setThumbnail('https://cdn.discordapp.com/attachments/745066864941465683/745822520229494824/sinnersquad_logo.jpg')
+    .setThumbnail('https://cdn.discordapp.com/attachments/745852739682041929/749057373603102810/sinnersquad_logo.jpg')
     .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
     .setDescription(`
 
