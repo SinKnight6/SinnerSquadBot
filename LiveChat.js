@@ -401,7 +401,7 @@ if (message.content.toLowerCase() === 'purchase') {
 
 if (message.content.toLowerCase() === 'impulse troubleshoot'){
   message.delete()
-  message.channel.send(`Looking for troubleshooting solutions <a:Loading:705280596217430019>
+  message.channel.send(`Looking for troubleshooting solutions .....
 ${message.author} Please stand by`)
     .then(sentMessage => sentMessage.delete({ timeout: 8000 })
    .catch(error => {
@@ -498,6 +498,7 @@ const embed = new Discord.MessageEmbed()
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
         msg.edit(embed)
+        r.remove(r.users.filter(u => u === message.author).first());
       })
 
       forwards.on('collect', r => {
@@ -505,6 +506,7 @@ const embed = new Discord.MessageEmbed()
         page++;
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
+        r.remove(r.users.filter(u => u === message.author).first());
         msg.edit(embed)
       
     })});
