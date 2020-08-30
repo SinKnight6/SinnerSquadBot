@@ -493,23 +493,23 @@ const embed = new Discord.MessageEmbed()
       const forwards = msg.createReactionCollector(forwardsFilter, { time: 5400000 });
 
       backwards.on('collect', r => {
-        reaction.users.remove(user);
         if (page === 1) return;
         page--;
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
         msg.edit(embed)
         r.remove(r.users.filter(u => u === message.author).first());
+        reaction.users.remove(user);
       })
 
       forwards.on('collect', r => {
-        reaction.users.remove(user);
         if (page === pages.length) return;
         page++;
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
-        r.remove(r.users.filter(u => u === message.author).first());
         msg.edit(embed)
+        r.remove(r.users.filter(u => u === message.author).first());
+        reaction.users.remove(user);
       
     })});
   });
