@@ -490,14 +490,15 @@ const embed = new Discord.MessageEmbed()
       const forwardsFilter = (reaction, user) => reaction.emoji.name === ('➡️') && user.id === message.author.id;
 
       const backwards = msg.createReactionCollector(backwardsFilter, { time: 5400000 });
+      reaction.users.remove(user);
       const forwards = msg.createReactionCollector(forwardsFilter, { time: 5400000 });
+      reaction.users.remove(user);
 
       backwards.on('collect', r => {
         if (page === 1) return;
         page--;
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
-        reaction.users.remove(user);
         msg.edit(embed)
       })
 
@@ -506,7 +507,6 @@ const embed = new Discord.MessageEmbed()
         page++;
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
-        reaction.users.remove(user);
         msg.edit(embed)
       
     })});
