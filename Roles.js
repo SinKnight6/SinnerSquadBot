@@ -26,7 +26,7 @@ setInterval(() => {
             "<:gtav:746210858937352263> - GTA V\n" +
             "<:warframe:746208599021191190> - WARFRAME\n");
         testChannel.send(embed)
-        .then(sentMessage => sentMessage.delete({ timeout: 25200000 })
+        .then(sentMessage => sentMessage.delete({ timeout: 25100000 })
         .catch(error => {
 
         }))
@@ -100,11 +100,13 @@ bot.on('messageReactionAdd', (reaction, user) => {
     if(member.roles.cache.has(role.id))
     {
         member.roles.remove(role.id).then(member => {
+            reaction.users.remove(user);
             console.log("Removed" + member.user.username + "from the" + role.name + "name.");
         }).catch(err => console.error);
     } 
     else {
         member.roles.add(role.id).then(member => {
+            reaction.users.remove(user);
             console.log('Added' + member.user.username + 'to the' + role.name + ' role.');
         }).catch(err => console.error);
     }
