@@ -395,7 +395,7 @@ if (message.content.toLowerCase() === 'purchase') {
     return attachments.array()
       .filter(attachment => valid.test(attachment.url))
       .map(attachment => attachment.url);
-  }
+  };
 
 // Break
 
@@ -495,6 +495,8 @@ if (message.content.toLowerCase() === 'standard features') {
     })
     
 };
+
+// Break
 
 });
 
