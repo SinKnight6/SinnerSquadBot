@@ -7,7 +7,6 @@ bot.on('ready', () => {
     let memberCount = myGuild.memberCount;
     let memberCountChannel = myGuild.channels.cache.get('746436458197549126');
     memberCountChannel.setName('Members: ' + memberCount)
-    .then(results => console.log(results))
     .catch(error => console.log(error));
 });
 
@@ -16,7 +15,6 @@ bot.on('guildMemberAdd', member => {
     let memberCount = myGuild.memberCount;
     let memberCountChannel = myGuild.channels.cache.get('746436458197549126');
     memberCountChannel.setName('Members: ' + memberCount)
-    .then(results => console.log(results))
     .catch(error => console.log(error));
 
 });
@@ -26,7 +24,6 @@ bot.on('guildMemberRemove', member => {
     let memberCount = myGuild.memberCount;
     let memberCountChannel = myGuild.channels.cache.get('746436458197549126');
     memberCountChannel.setName('Members: ' + memberCount)
-    .then(results => console.log(results))
     .catch(error => console.log(error));
     
 });
