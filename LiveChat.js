@@ -498,7 +498,7 @@ const embed = new Discord.MessageEmbed()
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
         msg.edit(embed)
-        r.remove(r.users.cache.filter(u => u === message.author).first());
+        r.remove(r.users.filter(u => u === message.author).first());
       })
 
       forwards.on('collect', r => {
@@ -506,7 +506,7 @@ const embed = new Discord.MessageEmbed()
         page++;
         embed.setDescription(pages[page-1]);
         embed.setFooter(`Page ${page} of ${pages.length}`);
-        r.remove(r.users.cache.filter(u => u === message.author).first());
+        r.remove(r.users.filter(u => u === message.author).first());
         msg.edit(embed)
       
     })});
