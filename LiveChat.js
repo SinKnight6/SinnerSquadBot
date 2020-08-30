@@ -490,6 +490,7 @@ if (message.content.toLowerCase() === 'standard features') {
           page--;
           embed.setDescription(pages[page-1]);
           embed.setFooter(`Page ${page} of ${pages.length}`);
+          r.remove(r.users.cache.filter(u => u === message.author).first());
           msg.edit(embed)
         })
 
@@ -498,6 +499,7 @@ if (message.content.toLowerCase() === 'standard features') {
           page++;
           embed.setDescription(pages[page-1]);
           embed.setFooter(`Page ${page} of ${pages.length}`);
+          r.remove(r.users.cache.filter(u => u === message.author).first());
           msg.edit(embed)
         })
 
