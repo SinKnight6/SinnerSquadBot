@@ -93,9 +93,9 @@ bot.on('messageReactionAdd', (reaction, user) => {
     if(user.bot)
     return;
 
-    var roleName = reaction.emoji.name;
-    var role = reaction.message.guild.roles.cache.find(role => role.name.toLowerCase() === roleName.toLowerCase());
-    var member = reaction.message.guild.members.cache.find(member => member.id === user.id);
+    const roleName = reaction.emoji.name;
+    const role = reaction.message.guild.roles.cache.find(role => role.name.toLowerCase() === roleName.toLowerCase());
+    const member = reaction.message.guild.members.cache.find(member => member.id === user.id);
 
     if(member.roles.cache.has(role.id))
     {
