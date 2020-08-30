@@ -85,19 +85,29 @@ if (message.content.toLowerCase() === '!help' && message.channel.id === '7458497
     .setAuthor(`${message.guild.name} Live Chat Beta`, message.guild.iconURL)
     .setDescription(`
 
-    2. If you have purchased something from Knight-Shop or Shoppy please type, _\`Purchase\`_ .
+    2. If you want to be part of the team please type, _\`Sign up\`_ .
 
-    3. If you had an issue with your puchase or need help purchasing please type, _\`Purchase issue\`_.
+    3. If you want to support any of our official team members please type, _\`Creator code\`_.
 
-    4. If you need information, help or have an issue with Impulse mod please type, _\`Impulse\`_ .
+    4. To see the team list please type, _\`Player list\`_ .
 
-    5. If you need information, help or have an issue with GTA V Game key please type, _\`GTA V\`_ .`)
+    5. If you want to send us feedback about our discord server please type, _\`Send feedback\`_ .`)
     .setTimestamp()
     .setFooter(`Live chat bot | At your service ${message.author.username}`, 'https://cdn.discordapp.com/attachments/696241284352049193/698835003718762576/livechat.gif')
     message.author.send({embed: uEmbed1});
 });
 });
 };
+
+// Break 
+
+
+
+// Break
+
+if (message.content.toLowerCase() === 'sign up'){
+  message.reply('please stand by')
+}
 
 // Break
 
