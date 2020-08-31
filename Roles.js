@@ -111,13 +111,6 @@ bot.on('messageReactionAdd', (reaction, user) => {
         }).catch(err => console.error);
     }
 
-if (reaction.emoji.id === '746208061550624860'){
-    message.reply('hey you are now shit')
-
-} else {
-    message.reply('now you are not shit anymore')
-}
-
 });
 
 bot.login(token);
