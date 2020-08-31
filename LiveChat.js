@@ -409,8 +409,6 @@ if (message.content.toLowerCase() === 'purchase') {
 
 // Break
 
-
-
 // Break
 
 });
