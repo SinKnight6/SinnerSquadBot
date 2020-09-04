@@ -26,11 +26,11 @@ setInterval(() => {
             "<:gtav:746210858937352263> - GTA V\n" +
             "<:warframe:746208599021191190> - WARFRAME\n");
         testChannel.send(embed)
-        .then(sentMessage => sentMessage.delete({ timeout: 25100000 })
+        .then(sentMessage => sentMessage.delete({ timeout: 21600000 })
         .catch(error => {
 
         }))
-}, 25200000);
+}, 21600000);
 
 });
 
@@ -78,7 +78,7 @@ bot.on('message', message => {
         "<:gtav:746210858937352263> - GTA V\n" +
         "<:warframe:746208599021191190> - WARFRAME\n");
         message.channel.send(embed)
-        .then(sentMessage => sentMessage.delete({ timeout: 25200000 })
+        .then(sentMessage => sentMessage.delete({ timeout: 21600000})
         .catch(error => {
 
         }))
